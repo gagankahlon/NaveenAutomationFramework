@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.naveenautomation.utils.CustomListener"/>
+    <listener class-name="com.qa.naveenautomation.RetryLogic.TransformerForRetry"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)(failed)">
+    <classes>
+      <class name="NaveenAutomation.NaveenAutomation.OrderHistoryTest">
+        <methods>
+          <include name="orderPlacedTest"/>
+          <include name="quitBrowserSession"/>
+          <include name="startBrowserSession"/>
+          <include name="loggerSetUp"/>
+        </methods>
+      </class> <!-- NaveenAutomation.NaveenAutomation.OrderHistoryTest -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

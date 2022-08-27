@@ -1,0 +1,5 @@
+browser=chrome
+url=https://naveenautomationlabs.com/opencart/index.php?route=account/login
+base_time=20
+username=gagan@gmail.com
+password=test123
