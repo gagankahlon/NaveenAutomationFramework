@@ -14,40 +14,42 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-public class LoginPageTest extends DriverFactory{
+public class LoginPageTest extends DriverFactory {
 
-	
 	LoginPage loginPage;
 	MyAccountPage accountPage;
 
 	@BeforeMethod
 	public void startBorwserSession() {
 		init_driver();
-		
-		loginPage =new LoginPage();
+
+		loginPage = new LoginPage();
 	}
+
+	@Test
+	public void testing() {
+		// testing imported git project
+	}
+
 	@Description("login Page Title Test")
 	@Severity(SeverityLevel.MINOR)
-	@Test(priority =1)
-	public void  pagetitleTest() {
-		String pageTitle=loginPage.getLoginPageTitle();
-		System.out.println("title of the page:"+pageTitle);
+	@Test(priority = 1)
+	public void pagetitleTest() {
+		String pageTitle = loginPage.getLoginPageTitle();
+		System.out.println("title of the page:" + pageTitle);
 		Assert.assertEquals(pageTitle, "Account Login");
 	}
-	@Test(priority=2)
+
+	@Test(priority = 2)
 	public void loginAccountTest() {
-		accountPage=loginPage.login("gagan@gmail.com", "test123");
-	
+		accountPage = loginPage.login("gagan@gmail.com", "test123");
+
 	}
-	
 
 	@AfterMethod
 	public void quitBrowserSession() {
 		quitBrowser();
-		
+
 	}
-	
-	
-	
-	
+
 }
